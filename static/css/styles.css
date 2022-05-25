@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: white;
+    background-color: #4169E1;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    text-transform: none;
+    outline: none;
+    color: white;
+}
+
+h3 {
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.content_container h3 {
+    text-align: center;
+    font-size: 35px;
+}
+
+div .intro_splash_text {
+    font-size: 30px;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    background: #1E90FF;
+    position: relative;
+    justify-content: space-between;
+    text-align: center;
+    padding: 15px 30px;
+}
+
+nav .icon {
+    font-size: 35px;
+    font-weight: 800;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+nav ol {
+    display: flex;
+    list-style: none;
+    margin: auto 0;
+}
+
+nav ol li {
+    margin: 0 2px;
+}
+
+nav ol li a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+}
+
+nav ol li:hover a {
+    background: white;
+    color: #1E90FF;
+}
+
+nav .search_box {
+    display: flex;
+    margin: auto 0;
+    height: 35px;
+    line-height: 35px;
+
+}
+
+nav .search_box input {
+    border: none;
+    outline: none;
+    background: white;
+    height: 100%;
+    padding: 0 10px;
+    font-size: 20px;
+    width: 350px;
+}
+
+nav .search_box span {
+    color: #1E90FF;
+    font-size: 20px;
+    background: white;
+    height: 100%;
+    padding: 8px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+}
+
+nav .search_box span:hover {
+    color: white;
+}
+
+nav .search_box span::after {
+    height: 100%;
+    width: 0;
+    content: '';
+    background: red;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    transition: 0.3s;
+}
+
+nav .search_box span:hover::after {
+    width: 100%;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-around;
+    background-color: #1E90FF;
+    margin-top: auto;
+    z-index: 1;
+}
+
+.footer-push {
+    display: flex;
+    justify-content: space-around;
+    background-color: #1E90FF;
+    margin-top: auto;
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer_block {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1vh;
+    color: #fff;
+    text-align: center;
+}
+
+.footer_block_social_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.simple_text {
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.intro_splash {
+    width: 100%;
+    height: 95vh;
+    background: url("../../assets/auction_house.png") center no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.intro_splash_text {
+    background-color: #000;
+    opacity: 0.8;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    margin-left: 70%;
+    margin-top: 0;
+    z-index: 2;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.content_container {
+    padding-top: 20px;
+}
+
+.content_container img {
+    display: flex;
+    width: 15%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.about {
+    display: flex;
+    width: 100%;
+    padding: 78px 0;
+    background-color: #4169E1;
+}
+
+.about img {
+    height: auto;
+    width: 45%;
+    border-radius: 15px;
+}
+
+.about_main {
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about_text {
+    width: 550px;
+}
+
+.about_text h1 {
+    color: white;
+    font-size: 80px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.about_text h5 {
+    color: white;
+    font-size: 25px;
+    text-transform: capitalize;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    letter-spacing: 2px;
+}
+
+.edu_block {
+    color: white;
+    letter-spacing: 1px;
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.about button {
+    margin-top: 25px;
+    align-items: center;
+    background: blueviolet;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .4s;
+}
+
+.about button:hover {
+    background: transparent;
+    border: 2px solid blueviolet;
+    cursor: pointer;
+}
