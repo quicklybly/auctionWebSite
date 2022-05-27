@@ -7,6 +7,13 @@
     <link rel="shortcut icon" href="assets/siteIcon.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/31415b613c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <style>
+        h1 {
+            font-size: 100px;
+            text-align: center;
+            vertical-align: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -31,9 +38,15 @@
     <div class="forms_container">
         <div class="forms-inner">
             <div class="forms">
-                <div class="login_form">
-                    <span class="form_title">Авторизация</span>
+                <div class="registration_form">
+                    <span class="form_title">Регистрация</span>
                     <form action="#">
+                        <div class="input_field">
+                            <label>
+                                <input type="text" placeholder="name" required>
+                            </label>
+                            <i class="uil uil-user"></i>
+                        </div>
                         <div class="input_field">
                             <label>
                                 <input type="text" placeholder="Email" required>
@@ -47,12 +60,12 @@
                             <i class="uil uil-padlock lock-icon"></i>
                         </div>
                         <div class="input_field button">
-                            <input type="button" value="ВОЙТИ">
+                            <input type="button" value="ЗАРЕГИСТРИРОВАТЬСЯ">
                         </div>
                         <div class="login-signup">
                             <span class="text">
-                                Нет аккаунта?
-                                <a href="registration.html">Зарегистрироваться</a>
+                                Уже есть аккаунт?
+                                <a href="login.html">Войти</a>
                             </span>
                         </div>
                     </form>
@@ -60,7 +73,7 @@
             </div>
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer-push">
         <div class="footer_block">
             <a class="nav_link" href="about.html">
                 <div class="simple_text">Об авторе</div>

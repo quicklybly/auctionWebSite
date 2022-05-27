@@ -20,6 +20,16 @@ a {
     color: white;
 }
 
+html, body {
+    height: 100%;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 h3 {
     margin: 0;
     padding-top: 5px;
@@ -125,12 +135,13 @@ nav .search_box span:hover::after {
     width: 100%;
 }
 
-.footer{
+.footer {
     display: flex;
     justify-content: space-around;
     background-color: #1E90FF;
     margin-top: auto;
     z-index: 1;
+    flex: 0 0 auto;
 }
 
 .footer-push {
@@ -193,11 +204,44 @@ nav .search_box span:hover::after {
     padding-top: 20px;
 }
 
-.content_container img {
+#logo {
     display: flex;
     width: 15%;
     margin-right: auto;
     margin-left: auto;
+}
+
+.product_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product_list .product {
+    display: table-column;
+    width: 20vw;
+    margin: 10px;
+}
+
+.product img {
+    width: 20vw;
+    height: auto;
+}
+
+.product_info {
+    height: 20vh;
+    font-size: 16px;
+    text-align: center;
+}
+
+.product_info p {
+    min-height: 13vh;
+    font-size: 17px;
+}
+
+.product_info h4 {
+    text-align: center;
+    font-size: 20px;
 }
 
 .about {
@@ -267,3 +311,101 @@ nav .search_box span:hover::after {
     border: 2px solid blueviolet;
     cursor: pointer;
 }
+
+.forms_container {
+    height: 70vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.forms-inner {
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.forms-inner .forms {
+    padding: 30px;
+}
+
+.forms-inner span {
+    color: #1E90FF;
+}
+
+.forms-inner .forms .form_title {
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.forms .input_field {
+    position: relative;
+    margin-top: 30px;
+    height: 50px;
+    width: 100%;
+}
+
+.input_field input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    border: 0;
+    outline: 0;
+    left: 0;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    font-size: 16px;
+}
+
+.input_field i {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 23px;
+}
+
+.input_field i.lock-icon {
+    left: 0;
+}
+
+.forms .button {
+    margin-top: 35px;
+}
+
+.forms .button input {
+    border: none;
+    color: white;
+    background-color: #4169E1;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+
+.forms .button input:hover {
+    background-color: blueviolet;
+}
+
+.forms .login-signup {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.forms a {
+    text-decoration: underline;
+    text-transform: none;
+    outline: none;
+    color: blueviolet;
+}
+
