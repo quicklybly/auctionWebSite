@@ -6,8 +6,10 @@
     <link rel="stylesheet" href="static/css/styles.css">
     <link rel="shortcut icon" href="assets/siteIcon.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/31415b613c.js" crossorigin="anonymous"></script>
+    <script src="static/js/visits.js"></script>
 </head>
 <body>
+<script>visits()</script>
 <div class="main-page">
     <nav>
         <a class="icon" href="index.html">Borsody Auction</a>
@@ -29,6 +31,9 @@
     <div class="intro_splash">
         <div class="intro_splash_text">
             Аукционный дом Братьев Борсоди
+        </div>
+        <div id="visits_text" class="intro_splash_text">
+            <script>printVisits()</script>
         </div>
     </div>
     <div class="container">

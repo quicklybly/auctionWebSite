@@ -184,6 +184,12 @@ nav .search_box span:hover::after {
     z-index: 1;
 }
 
+#visits_text {
+    margin-right: 70%;
+    margin-left: auto;
+    font-size: 25px;
+}
+
 .intro_splash_text {
     background-color: #000;
     opacity: 0.8;
