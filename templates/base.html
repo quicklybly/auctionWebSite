@@ -27,8 +27,8 @@
                 <li><a href="/registration">Регистрация</a></li>
                 <li><a href="/login">Войти</a></li>
             {% else %}
-                <a class="nav_link" href="/logout">ВЫХОД</a>
-                <a class="nav_link">{{ c_user.name.upper() }}</a>
+                <li><a class="nav_link" href="/logout">Выход</a></li>
+                <li><a class="nav_link">{{ c_user.name.upper() }}</a></li>
             {% endif %}
         </ol>
     </nav>
