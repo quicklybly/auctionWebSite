@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="forms_container">
+        <div class="forms-inner">
+            <div class="forms">
+                <div class="login_form">
+                    <span class="form_title">Авторизация</span>
+                    <form action="" method="post">
+                        {{ form.hidden_tag() }}
+                        <div class="input_field">
+                            {{ form.email(class="text", type="email", placeholder=form.email.label.text) }}<br>
+                            {% for error in form.email.errors %}
+                                <p class="alert alert-danger" role="alert">
+                                    {{ error }}
+                                </p>
+                            {% endfor %}
+                            <i class="uil uil-envelope-alt"></i>
+                        </div>
+                        <div class="input_field">
+                            {{ form.password(class="text", type="password", placeholder=form.password.label.text) }}
+                            {% for error in form.password.errors %}
+                                <p class="alert alert-danger" role="alert">
+                                    {{ error }}
+                                </p>
+                            {% endfor %}
+                            <i class="uil uil-padlock lock-icon"></i>
+                        </div>
+                        <div class="input_field button">
+                            <p>{{ form.submit(type="submit", class="submit_btn") }}</p>
+                            {{ message }}
+                        </div>
+                        <div class="login-signup">
+                            <span class="text">
+                                Нет аккаунта?
+                                <a href="/registration">Зарегистрироваться</a>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

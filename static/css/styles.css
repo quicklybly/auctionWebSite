@@ -178,7 +178,7 @@ nav .search_box span:hover::after {
 .intro_splash {
     width: 100%;
     height: 95vh;
-    background: url("../../assets/auction_house.png") center no-repeat;
+    background: url("../../static/assets/auction_house.png") center no-repeat;
     background-size: cover;
     position: relative;
     z-index: 1;

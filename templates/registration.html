@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="forms_container">
+        <div class="forms-inner">
+            <div class="forms">
+                <div class="registration_form">
+                    <span class="form_title">Регистрация</span>
+                    <form action="" method="post">
+                        {{ form.hidden_tag() }}
+                        <div class="input_field">
+                            {#                            <label>#}
+                            {#                                <input type="text" placeholder="name" required>#}
+                            {#                            </label>#}
+                            {{ form.name(class="text", placeholder=form.name.label.text) }}
+                            <i class="uil uil-user"></i>
+                            {% for error in form.name.errors %}
+                                <p class="alert alert-danger" role="alert">
+                                    {{ error }}
+                                </p>
+                            {% endfor %}
+                        </div>
+                        <div class="input_field">
+                            {{ form.email(class="text", type="email", placeholder=form.email.label.text) }}<br>
+                            {% for error in form.email.errors %}
+                                <p class="alert alert-danger" role="alert">
+                                    {{ error }}
+                                </p>
+                            {% endfor %}
+                            <i class="uil uil-envelope-alt"></i>
+                        </div>
+                        <div class="input_field">
+                            {{ form.password(class="input", type="password", placeholder=form.password.label.text) }}
+                            <br>
+                            {% for error in form.password.errors %}
+                                <p class="alert alert-danger" role="alert">
+                                    {{ error }}
+                                </p>
+                            {% endfor %}
+                            <i class="uil uil-padlock lock-icon"></i>
+                        </div>
+                        <div class="input_field button">
+                            {{ form.submit(type="submit", class="submit") }}
+                        </div>
+                        {{ message }}
+                        <div class="login-signup">
+                            <span class="text">
+                                Уже есть аккаунт?
+                                <a href="/login">Войти</a>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

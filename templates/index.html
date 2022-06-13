@@ -1,33 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Borsody Auction House</title>
-    <link rel="stylesheet" href="static/css/styles.css">
-    <link rel="shortcut icon" href="assets/siteIcon.ico" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/31415b613c.js" crossorigin="anonymous"></script>
-    <script src="static/js/visits.js"></script>
-</head>
-<body>
-<script>visits()</script>
-<div class="main-page">
-    <nav>
-        <a class="icon" href="index.html">Borsody Auction</a>
-        <div class="search_box">
-            <label>
-                <input type="search" placeholder="Поиск">
-            </label>
-            <span class="fa-solid fa-magnifying-glass"></span>
-        </div>
-        <ol>
-            <li><a href="index.html">Домой</a></li>
-            <li><a href="index.html#about">О нас</a></li>
-            <li><a href="index.html#products">Наши товары</a></li>
-            <li><a href="registration.html">Регистрация</a></li>
-            <li><a href="login.html">Войти</a></li>
+{% extends "base.html" %}
 
-        </ol>
-    </nav>
+{% block content %}
     <div class="intro_splash">
         <div class="intro_splash_text">
             Аукционный дом Братьев Борсоди
@@ -38,7 +11,7 @@
     </div>
     <div class="container">
         <div class="content_container" id="about">
-            <img src="assets/borsody_logo.png" alt="" id="logo">
+            <img src="../static/assets/borsody_logo.png" alt="" id="logo">
             <h3>Аукционный дом Братьев Борсоди</h3>
             <div class="simple_text">
                 Аукционный Дом Братьев Борсоди (ориг. Dom Borsodych) — основанная братьями <br>
@@ -74,7 +47,7 @@
             <h3>Наши товары</h3>
             <div class="product_list">
                 <div class="product">
-                    <img src="assets/products/arondit.jpg" alt="">
+                    <img src="../static/assets/products/arondit.jpg" alt="">
                     <div class="product_info">
                         <h4>Арондит</h4>
                         <p>Легендарный серебрянный меч Геральта из Ривии, который он получил в подарок от Владычицы
@@ -83,7 +56,7 @@
                     </div>
                 </div>
                 <div class="product">
-                    <img src="assets/products/kaer_armor.jpg" alt="">
+                    <img src="../static/assets/products/kaer_armor.jpg" alt="">
                     <div class="product_info">
                         <h4>Доспех из Каэр Морхена</h4>
                         <p>Ведьмачий доспех, который используют ведьмаки школы Волка среди пользователей можно
@@ -92,7 +65,7 @@
                     </div>
                 </div>
                 <div class="product">
-                    <img src="assets/products/swallow.jpg" alt="">
+                    <img src="../static/assets/products/swallow.jpg" alt="">
                     <div class="product_info">
                         <h4>Эликсир Ласточка</h4>
                         <p>«Это зелье, ускоряющее заживление ран, получило свое название от ласточки, что
@@ -102,7 +75,7 @@
                     </div>
                 </div>
                 <div class="product">
-                    <img src="assets/products/samum.jpg" alt="">
+                    <img src="../static/assets/products/samum.jpg" alt="">
                     <div class="product_info">
                         <h4>Бомба Самум</h4>
                         <p>«Будто джинна, зерриканские алхимики заключили в бутылку обжигающий пустынный вихрь».
@@ -111,7 +84,7 @@
                     </div>
                 </div>
                 <div class="product">
-                    <img src="assets/products/Jen_gwint.jpg" alt="">
+                    <img src="../static/assets/products/Jen_gwint.jpg" alt="">
                     <div class="product_info">
                         <h4>Карта гвинт Йеннифэр из Венгерберга</h4>
                         <p>Та самая чародейка от которой пахнет сиренью и крыжовником теперь в вашей колоде для игры в
@@ -121,7 +94,7 @@
                     </div>
                 </div>
                 <div class="product">
-                    <img src="assets/products/Wolfsbane.jpg" alt="">
+                    <img src="../static/assets/products/Wolfsbane.jpg" alt="">
                     <div class="product_info">
                         <h4>Волкобой</h4>
                         <p>Трава волкобой, также называемая королевой ядов, входит в состав многих ведьмачьих эликсиров
@@ -134,13 +107,4 @@
 
         </div>
     </div>
-    <footer class="footer">
-        <div class="footer_block">
-            <a class="nav_link" href="about.html">
-                <div class="simple_text">Об авторе</div>
-            </a>
-        </div>
-    </footer>
-</div>
-</body>
-</html>
+{% endblock %}

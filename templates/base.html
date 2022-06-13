@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="shortcut icon" href="/static/assets/siteIcon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/31415b613c.js" crossorigin="anonymous"></script>
+    <script src="/static/js/visits.js"></script>
+</head>
+<body>
+<script>visits()</script>
+<div class="{{ page_type }}">
+    <nav>
+        <a class="icon" href="/">Borsody Auction</a>
+        <div class="search_box">
+            <label>
+                <input type="search" placeholder="Поиск">
+            </label>
+            <span class="fa-solid fa-magnifying-glass"></span>
+        </div>
+        <ol>
+            <li><a href="/">Домой</a></li>
+            <li><a href="/#about">О нас</a></li>
+            <li><a href="/#products">Наши товары</a></li>
+            {% if anonymous %}
+                <li><a href="/registration">Регистрация</a></li>
+                <li><a href="/login">Войти</a></li>
+            {% else %}
+                <a class="nav_link" href="/logout">ВЫХОД</a>
+                <a class="nav_link">{{ c_user.name.upper() }}</a>
+            {% endif %}
+        </ol>
+    </nav>
+    {% block content %}{% endblock %}
+
+    {% if footer %}
+        <footer class="footer">
+            <div class="footer_block">
+                <a class="nav_link" href="/about">
+                    <div class="simple_text">Об авторе</div>
+                </a>
+            </div>
+        </footer>
+    {% else %}
+        {% block about %}{% endblock %}
+    {% endif %}
+</div>
+</body>
+</html>
