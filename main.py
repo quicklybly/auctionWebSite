@@ -37,7 +37,7 @@ def load_user(user_id):
 
 
 @app.route("/")
-def index():  # main.db page
+def index():
     return render_template("index.html", anonymous=current_user.is_anonymous,
                            c_user=current_user, title="Borsody Auction House", page_type="main.db-page", footer=True)
 
@@ -55,7 +55,6 @@ def registration():
 
     if form_registration.validate_on_submit():
         if is_user_in_database(form_registration.email.data):
-            #
             return render_template('registration.html', anonymous=current_user.is_anonymous, c_user=current_user,
                                    title=title, form=form_registration, message="This user already exists", footer=True,
                                    page_type="page")
@@ -76,7 +75,7 @@ def login():
         user = db_sess.query(User).filter(User.email == form_login.email.data).first()
 
         if not user:
-            # Нет в базе данных
+            # not in database
             return render_template('login.html', anonymous=current_user.is_anonymous,
                                    c_user=current_user, title=title, form=form_login,
                                    message="There is no such user", footer=True, page_type="page")
